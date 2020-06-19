@@ -22,7 +22,7 @@
     "<ul>\n",
     "     <li>high loan balances</li>\n",
     "     <li>low income levels</li>\n",
-    "     <li>too many inquiries on an individual's credit report</li>\n",
+    "     <li>too many inquiries on an individual's  credit report</li>\n",
     "</ul>\n",
     "Handling these applications manaually is a hectic task, error-prone, and time-consuming (and time is money!).Then,why waste so much energy on such hard work while we can do \"Smart Work\" by automating this task with the power of <b>Machine Learning</b><br/>\n",
     "In this notebook, we will build an automatic credit card approval predictor using machine learning techniques, just like the real banks do.</p>\n",
