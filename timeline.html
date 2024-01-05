@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        sidebar {
+            width: 200px;
+            background-color: #eee;
+            padding: 20px;
+            display: none;
+        }
+
+        content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #menu-btn {
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id='header'>
+       
+        <div id="menu-btn">&#9776;</div>
+        <h1>Home</h1>
+    </header>
+
+    <main>
+        <sidebar>
+           
+            <p>Sidebar Content</p>
+        </sidebar>
+
+        <content>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <h2>Event 1</h2>
+                    <p>Description of Event 1.</p>
+                    <span>Date: January 1, 2024</span>
+                </li>
+                <li class="timeline-item">
+                    <h2>Event 2</h2>
+                    <p>Description of Event 2.</p>
+                    <span>Date: February 1, 2024</span>
+                </li>
+                
+            </ul>
+        </content>
+    </main>
+
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            
+            document.querySelector('sidebar').style.display = 
+                document.querySelector('sidebar').style.display === 'none' ? 'block' : 'none';
+
+         document.getElementById('header').style.backgroundColor='red';
+        
+        });
+       
+        
+    </script>
+
+</body>
+</html>
