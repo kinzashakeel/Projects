@@ -15,7 +15,7 @@
         }
 
         header {
-            background-color: #333;
+            background-color: green;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -68,43 +68,251 @@
             font-size: 1.5em;
             margin-right: 10px;
         }
+        img{
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+        div{
+            float: left;
+        }
+       .sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 8px;
+  padding-top:20px; 
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.left_sidebar {
+    background-color: #fff;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.left_grid ul li {
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+   }
+.left_group_black{
+  background-color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.row {
+  margin-right: -15px;
+
+
+}
+.foot {
+    background-color: #202548;
+    color: white;
+    padding: 20px;
+    word-wrap: break-word;
+}
+.foot h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+.foot p {
+    color: white;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+.container.foot-index {
+        width: 100% !important;
+
+    }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
     </style>
 </head>
 <body>
 
-    <header id='header'>
-       
-        <div id="menu-btn">&#9776;</div>
-        <h1>Home</h1>
-    </header>
+<header class="header_two header_front" id="header_name">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-xs-12">
+<div class="left_head_top">
+<div class="col-md-4" style="margin-top: 15px;padding-left: 100px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 20px;">
+<a href="https://dev.thesharepage.com/timeline/"><img src="https://dev.thesharepage.com/img/logosharepage.png" alt="The SharePage" class="img-responsive"><p class="img_text" style="float: left; color: white;">The SharePage</p></a>
+</div>
+<div class="col-md-8" style="margin-top: 20px; margin-left: 20px;">
+<form class="inner_top_form" method="POST" action="https://dev.thesharepage.com/search/index.php">
+<div class="form-group" style="padding-left: 50px;">
+
+
+<select name="profiles" id="profiles">
+<optgroup label="Profiles">
+    <option value="business">All-Profiles</option>
+    <option value="business">Business</option>
+    <option value="freelancer">Freelancer</option>
+    <option value="professional">Professional</option>
+    <option value="personal">Personal</option>
+</optgroup>
+<optgroup label="Product">
+    <option value="business">Store</option>
+    <option value="business">Job Board</option>
+    <option value="freelancer">Real Estate</option>
+    <option value="professional">Freelancers</option>
+    <option value="personal">Classified Ads</option>
+</optgroup>
+  
+</select>
+<input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" name="txtSearch" value="" required="">
+
+</div>
+</form>
+</div>
+</div>
+</div>
+<style>
+.zoom {
+// padding: 50px;
+// background-color: green;
+transition: transform .2s;
+//width: 19px;
+//height: 19px;
+//margin: 0 auto;
+}
+
+.zoom:hover {
+-ms-transform: scale(1.1);
+
+-webkit-transform: scale(1.1);
+
+transform: scale(1.1);
+}
+
+.dropdown-backdrop {
+display: none !important;
+}
+</style>
+
+</header>
 
     <main>
-        <sidebar>
-           
-            <p>Sidebar Content</p>
-        </sidebar>
+       
 
-        <content>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <h2>Event 1</h2>
-                    <p>Description of Event 1.</p>
-                    <span>Date: January 1, 2024</span>
-                </li>
-                <li class="timeline-item">
-                    <h2>Event 2</h2>
-                    <p>Description of Event 2.</p>
-                    <span>Date: February 1, 2024</span>
-                </li>
-                
-            </ul>
-        </content>
+  <div class="left_grid left_group_black left_sidebar" style="float: left;">
+<ul>
+<li class="zoom"><strong>
+<a href="timeline1.html" style="float: left;">
+<img alt="profilepic" class="img-circle" src="https://t3.ftcdn.net/jpg/01/10/68/02/360_F_110680229_vf4Kpwnk6axfenTvelXQLb8XkJ8jnO5Y.jpg">
+<p style="white-space: nowrap; width: 130px; overflow: hidden; text-overflow: ellipsis;">Stores</p>
+</a>
+</strong></li>
+<li class="zoom"><a href="https://dev.thesharepage.com/dashboard/"><img src="https://static.thenounproject.com/png/1861058-200.png" class="img-responsive" alt="">
+    <br/><br/><br/>
+<p>Freelancer</p>
+</a></li>
+<li class="zoom"><a href="https://dev.thesharepage.com/profile/index.php?favourite"><img src="https://cdn-icons-png.flaticon.com/512/384/384581.png" class="img-responsive" alt="">
+<p>Job Board</p>
+</a></li>
+<li class="zoom"><a href="https://dev.thesharepage.com/inbox.php"><img src="https://static.thenounproject.com/png/30626-200.png" class="img-responsive" alt="">
+<p>
+Real Estate</p>
+</a></li>
+</ul>
+</div>
+       
     </main>
+<br/><br/><br/>
+    
+    <div class="foot b2">
+<div class="container foot-index">
+        <div class="row">
+<div class="col-md-4">
+<h2>The SharePage</h2>
+<p>Welcome to the SharePage! Your One Stop Shop for social and ecommerce platform! Socialize in confidence while you explore multiple streams of income opportunities that are waiting for you !</p>
+<div class="sociallinks">
+<a href="https://twitter.com/TSharepage" target="_blank"><i class="fab fa-twitter" style="color:white!important;font-size:30px!important;padding-left: 13px;"></i></a>
+<a href="https://www.facebook.com/TheSharePageOfficial/" target="_blank"><i class="fab fa-facebook" style="color:white!important;font-size:30px!important;padding-left: 13px;"></i></a>
+<a href="https://instagram.com/TSharepage" target="_blank"><i class="fab fa-instagram" style="color:white!important;font-size:30px!important;padding-left: 13px;"></i></a>
+                            
+</div>
+</div>
+<div class="col-md-2">
+<h2>Objectiveqdasxs</h2>
+<p><a href="https://dev.thesharepage.com/contact.php">Contact Us</a></p>
 
-    <footer>
-        <p>&copy; 2024</p>
-    </footer>
+<p><a href="https://dev.thesharepage.com/page/?page=the_sharepage">The SharePage</a></p>
 
+</div>
+<div class="col-md-2">
+<h2>Guide</h2>
+<p><a href="https://dev.thesharepage.com/page/howtos.php?page=howtos">How To</a></p>
+
+
+<p><a href="https://dev.thesharepage.com/page/?page=sharepage_navigation">Sharepage Navigation</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=business_profile">Business Profile</a></p>
+
+</div>
+<div class="col-md-2">
+<h2>Our Policies</h2>
+<p><a href="https://dev.thesharepage.com/page/?page=copyrights">Copyrights</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=privacy_policy">Privacy Policy</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=terms_and_condition">Terms and Condition</a></p>
+
+</div>
+<div class="col-md-2">
+<h2>Offerings</h2>
+<p><a href="https://dev.thesharepage.com/page/?page=investment_opportunities">Investment Opportunities</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=referral__commissions">Referral  Commissions</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=sp_points">Sp Points</a></p>
+<p><a href="https://dev.thesharepage.com/page/?page=we_are_different">We are Different</a></p>
+
+</div>
+
+
+</div>
+</div>
+</div>
+ 
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             
